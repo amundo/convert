@@ -31,7 +31,7 @@ $(function(){
     rules.sort(function(a,b){ return b[0].length < a[0].length ? -1 : 1; });
     $.each(rules, function(i, rule){
       var before = rule[0], after = rule[1];
-      text = text.replace(before, after);
+      text = text.replace(before, after, 'g');
     })
     return text;
   }
