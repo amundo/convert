@@ -288,6 +288,18 @@
         "\u2026"
     ],
     [
+        "{question}", 
+        "\u00BF"
+    ],
+    [
+        "{invertedquestion}", 
+        "\u00BF"
+    ],
+    [
+        "{beta}", 
+        "\u03B2"
+    ],
+    [
         "{emdash}", 
         "\u2014"
     ]
