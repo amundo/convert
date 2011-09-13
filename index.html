@@ -2,80 +2,27 @@
 <html dir='ltr' lang='en'>
   <head>
     <meta content='text/html; charset=utf-8' http-equiv='content-type' />
-    <title>
-convert 
-    </title>
-    <script src='jquery.js' type='text/javascript'></script>
-    <script src='convert.js' type='text/javascript'></script>
-    <script src='subfile.json' type='text/javascript'></script>
+    <title>notebook</title>
+    <script src='js/jquery.js' ></script>
+    <script src='js/underscore.js' ></script>
+    <script src='js/backbone.js' ></script>
+    <script src='js/subfile.json' ></script>
 
-<script type="text/javascript">
+    <script src='js/notebook.js' ></script>
 
-$(function(){
 
-  var data = null;
-  $.getJSON('subfile.json', function(resp){
-    data = resp;
-    storeRules(data);
-  })
+<link rel=stylesheet href=style.css > </style>
 
-  function storeRules(data){
-    $('#rules').data('rules', data);
-    $.each(data, function(i, datum){
-      $('#rules').append('<dt>'+datum[0]+'</dt><dd>'+datum[1]+'</dd>');
-    })
-  }
+</head>
+<body class='mainpage'>
 
-  function convert(text){
-    var rules = $('#rules').data('rules');
-    rules.sort(function(a,b){ return b[0].length < a[0].length ? -1 : 1; });
-    $.each(rules, function(i, rule){
-      var before = rule[0], after = rule[1];
-      text = text.replace(before, after, 'g');
-    })
-    return text;
-  }
-
-  $('#before').keyup(function(){
-
-    var before = $('#before').attr('value');
-    var after = convert(before);
-    $('#after').attr('value', after);
-
-  })
-
-})
-
-</script>
-
-    <style type="text/css">
-
-#content { overflow:auto; padding: 2em; }
-#rules { font-size:small; border: 1px dotted gray; overflow: auto; margin: 1em;padding: 4px; width: 10em; float:left; }
-#rules dd { margin:0; padding: 0;}
-#rules dt {  margin:0; padding: 0;}
-textarea { font-family: 'Aboriginal Serif'; font-size: 2em ; line-height: 150%; width: 40%; border: 1px solid black; height: 400px;}
-textarea#before {   }
-textarea#after { float:right;  }
-    </style>
-  </head>
-  <body class='mainpage'>
-
-  <div id='header'>
-    <h1>convert letters</h1>
+  <div id='editor'>
+    <span id=rules></span>
+    <textarea id="plain"></textarea>
+    <textarea id="transliterated"></textarea>
   </div>
 
-<p>
-a simple way to type fancy unicode letters: "{g-stroke}" becomes  &#x01E5;", and so on.
-</p>
-  <div id="content">
-<dl id=rules>
-<dt><strong>before</strong></dt>
-<dd><strong>after</strong></dd>
-</dl>
-<textarea id="before"></textarea>
-<textarea id="after"></textarea>
-  </div><!--  #content -->
+  <ol id="notebook"> </ol>
 
   </body>
 </html>

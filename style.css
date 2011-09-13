@@ -1,0 +1,66 @@
+body {
+  margin:0;
+    padding:0;
+   background: url(cardboard.gif);
+} 
+
+div#editor {
+  border-bottom: 1px solid hsl(39, 50%, 41%);
+  width: 100%;
+  overflow:auto;
+  background: white;
+  padding: 1em 0 0 ;
+}
+
+
+#rules {
+  font-size:small;
+   border: 1px dotted gray;
+   overflow: auto;
+   padding: 2px;
+    width: 10em;
+   float:right;
+}
+
+#rules strong { 
+  margin-left: .5em;
+}
+
+textarea#notebook {
+  padding: 1em;
+  margin: 0 auto;
+  bottom:  0;
+  display:block;
+  font-size: 2em ;
+  line-height: 150%;
+  width: 90%;
+  border: 1px solid black;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 400px;
+}
+
+textarea#transliterated, textarea#plain {
+  text-align: center;
+  padding: .4em;
+  width:90%;
+  height: 1em;
+  overflow-y: hidden;
+  display:block;
+  margin: 1em auto;
+} 
+
+textarea#transliterated {
+  font-size: x-large;
+}
+
+textarea#plain {
+  font-size:normal;
+  border: none;
+  margin-bottom: 0;
+  color: gray;
+}
