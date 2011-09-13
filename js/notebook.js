@@ -1,17 +1,19 @@
 $(function(){
 
 
-  window.Sentence = Backbone.Model.extend({
-    initialize: function(){
-      console.log(this.toJSON());
-    }    
+  window.Sentence = Backbone.Model.extend({ 
+
+    initialize: function() {
+      console.log(this.model.toJSON()) 
+    }
+
   });
 
   window.Text = Backbone.Collection.extend({
 
     model : Sentence,
 
-    initialize: function(stuff, options){
+    initialize: function(models, options){
       this.url = options.url;
     }
     
@@ -25,7 +27,6 @@ $(function(){
     },
 
     render : function(){
-console.log('inrender');
       var rendered = this.template(this.model.toJSON());
       $(this.el).html(rendered);
       return this;
@@ -52,26 +53,34 @@ console.log('inrender');
 
   });
 
+
   function Notebook(params){
 
-    this.text = new Text({}, {
-      url: params.url 
-    });
+    this.text = new Text(
+      // models
+      {}, 
+      // params
+      {
+        url: params.url 
+      }
+    );
 
-    this.textView = new TextView({
-      collection: this.text
-    });
 
     this.start = function(){
-      this.textView.collection.fetch();
+      this.text.fetch();
+      this.textView = new TextView({
+        collection: this.text
+      });
       $('body').append(this.textView.render().el);
     };
 
   }
 
-  window.notebook = new Notebook({
-    'url': 'js/mandarin.js'
-  });
+  window.notebook = new Notebook(
+    {
+      'url': 'js/mandarin.js'
+    }
+  );
 
   window.notebook.start();
   
