@@ -8,11 +8,21 @@ $(function(){
   });
 
   window.Sentences = Backbone.Collection.extend({
-    url : 'js/mandarin.json',
+
     model : Sentence,
+
+    initialize: function(options){
+      this.url = options.url;
+      this.bind("reset", this.value_change);
+    },
+
+    value_change: function(){
+      console.log('changed');
+    }
   });
 
   window.NotebookView = Backbone.View.extend({
+
     el : $('#notebook') ,
 
     initialize : function(){
@@ -20,13 +30,17 @@ $(function(){
     },
 
     render : function(){
+        console.log(this.collection);
     }
+
   });
 
-  function Notebook(){
+  function Notebook(options){
+
+    //console.log(options.url);
 
     window.sentences = new Sentences({
-      url: 'js/notebook.js'
+      url: options.url 
     });
 
     window.notebookView = new NotebookView({
@@ -34,13 +48,15 @@ $(function(){
     });
 
     this.start = function(){
-      sentences.reset();
-      notebookView.render();
-      //Backbone.history.start();
+      notebookView.collection.fetch();
     };
 
   }
 
-  window.notebook = new Notebook().start();
-
+  window.notebook = new Notebook({
+    'url': 'js/mandarin.js'
+  });
+  window.notebook.start();
+  window.notebookView.render();
+  
 })

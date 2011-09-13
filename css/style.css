@@ -1,7 +1,7 @@
 body {
   margin:0;
     padding:0;
-   background: url(cardboard.gif);
+   background: url(../images/cardboard.gif);
 } 
 
 div#editor {
@@ -26,22 +26,25 @@ div#editor {
   margin-left: .5em;
 }
 
-textarea#notebook {
-  padding: 1em;
-  margin: 0 auto;
-  bottom:  0;
+#notebook {
   display:block;
+  bottom:  0;
+
+  min-height: 500px;
+  height: 50%;
+  width: 90%;
+
+  margin: 1em auto;
+
   font-size: 2em ;
   line-height: 150%;
-  width: 90%;
+
   border: 1px solid black;
-  -webkit-border-top-left-radius: 20px;
-  -webkit-border-top-right-radius: 20px;
-  -moz-border-radius-topleft: 20px;
-  -moz-border-radius-topright: 20px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 400px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+
+  background:white;
 }
 
 textarea#transliterated, textarea#plain {
