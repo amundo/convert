@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html dir='ltr' lang='en'>
+<html lang='en'>
   <head>
     <meta content='text/html; charset=utf-8' http-equiv='content-type' />
     <title>notebook</title>
     <script src='js/jquery.js' ></script>
     <script src='js/underscore.js' ></script>
     <script src='js/backbone.js' ></script>
-    <script src='js/subfile.json' ></script>
+    <script src='js/subfile.js' ></script>
 
+    <script src='js/mandarin.js' ></script>
     <script src='js/notebook.js' ></script>
 
 
 <link rel=stylesheet href=style.css > </style>
 
 </head>
-<body class='mainpage'>
+<body>
 
   <div id='editor'>
-    <span id=rules></span>
     <textarea id="plain"></textarea>
     <textarea id="transliterated"></textarea>
   </div>
 
-  <ol id="notebook"> </ol>
+  <div id="notebook"> 
+  <ol>
+  </ol>
+  </div><!-- #notebook -->
 
   </body>
 </html>
