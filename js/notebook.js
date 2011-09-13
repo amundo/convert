@@ -11,24 +11,23 @@ $(function(){
     model : Sentence,
 
     initialize: function(options){
-      //this.options = options || {};
-      //if (this.options.url) this.url = this.options.url;
-
       this.url = options.url;
-      //this.template = _.template($('#sentence_template').html());
     }
     
   });
 
   window.SentenceView = Backbone.View.extend({
-    model: Sentence,
 
     initialize : function(){
       _.bindAll(this, 'render');
+      this.template = _.template($('#sentence_template').html());
     },
 
     render : function(){
+      $(this.el).html(this.template(this.model.toJSON()));
+      return this;
     }
+
   })
 
   window.NotebookView = Backbone.View.extend({
@@ -40,10 +39,11 @@ $(function(){
     },
 
     render : function(){
-      _(this.collection.models).each(function(sentence) { 
-        var view = new SentenceView(sentence);
-        this.$('ol').append(view.render());
+      this.collection.each(function(sentence) { 
+        var view = new SentenceView({model: sentence});
+        this.$('ol').append(view.render().el);
       }) ;
+      $(this.el).appendTo('body');
       return this;
     }
 
@@ -51,17 +51,17 @@ $(function(){
 
   function Notebook(options){
 
-    window.sentences = new Sentences({
+    this.sentences = new Sentences({
       url: options.url 
     });
 
-    window.notebookView = new NotebookView({
-      collection: sentences
+    this.notebookView = new NotebookView({
+      collection: this.sentences
     });
 
     this.start = function(){
-      $('body').append(window.notebookView.render().el);
-      window.notebookView.collection.fetch();
+      this.notebookView.collection.fetch();
+      $('body').append(this.notebookView.render().el);
     };
 
   }
@@ -71,6 +71,5 @@ $(function(){
   });
 
   window.notebook.start();
-console.log(window.notebookView.collection.models);
   
 })
