@@ -3,14 +3,15 @@ $(function(){
 
   window.Sentence = Backbone.Model.extend({
     initialize: function(){
+      console.log(this.toJSON());
     }    
   });
 
-  window.Sentences = Backbone.Collection.extend({
+  window.Text = Backbone.Collection.extend({
 
     model : Sentence,
 
-    initialize: function(options){
+    initialize: function(stuff, options){
       this.url = options.url;
     }
     
@@ -24,13 +25,15 @@ $(function(){
     },
 
     render : function(){
-      $(this.el).html(this.template(this.model.toJSON()));
+console.log('inrender');
+      var rendered = this.template(this.model.toJSON());
+      $(this.el).html(rendered);
       return this;
     }
 
   })
 
-  window.NotebookView = Backbone.View.extend({
+  window.TextView = Backbone.View.extend({
 
     el : $('#notebook') ,
 
@@ -39,7 +42,7 @@ $(function(){
     },
 
     render : function(){
-      this.collection.each(function(sentence) { 
+      _.each(this.collection, function(sentence) { 
         var view = new SentenceView({model: sentence});
         this.$('ol').append(view.render().el);
       }) ;
@@ -49,19 +52,19 @@ $(function(){
 
   });
 
-  function Notebook(options){
+  function Notebook(params){
 
-    this.sentences = new Sentences({
-      url: options.url 
+    this.text = new Text({}, {
+      url: params.url 
     });
 
-    this.notebookView = new NotebookView({
-      collection: this.sentences
+    this.textView = new TextView({
+      collection: this.text
     });
 
     this.start = function(){
-      this.notebookView.collection.fetch();
-      $('body').append(this.notebookView.render().el);
+      this.textView.collection.fetch();
+      $('body').append(this.textView.render().el);
     };
 
   }
