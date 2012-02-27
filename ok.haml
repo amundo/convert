@@ -1,0 +1,24 @@
+!!!5
+%html 
+  %head
+    %title IPA
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/jquery.autogrow.js"}
+    %script{:src => "coffee/coffee-script.js", :type => "text/coffeescript"}
+    %script{:src => "coffee/convert.coffee", :type => "text/coffeescript"}
+    %script{:src => "subfile.json", :type => "text/javascript"}
+    %link{:href => "css/style.css", :rel => "stylesheet"}
+
+    %meta{:charset=>'utf-8'}
+  %body
+    #bar
+      %h1 convert
+      %input#search
+      %ul#matches
+        %li 
+          %span.letter é   
+          %span.name latin letter small A
+    #work
+      %textarea#editor
+
+
