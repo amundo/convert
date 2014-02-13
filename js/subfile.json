@@ -1,5 +1,21 @@
 [
     [
+        "{lquote}", 
+        "\u2018"
+    ], 
+    [
+        "{rquote}", 
+        "\u2019"
+    ], 
+    [
+        "{rdoublequote}", 
+        "\u201D"
+    ], 
+    [
+        "{ldoublequote}", 
+        "\u201C"
+    ], 
+    [
         "{dotbelow}", 
         "\u0323"
     ], 
@@ -24,15 +40,19 @@
         "\u030c"
     ], 
     [
+        "{null}", 
+        "\u2205"
+    ], 
+    [
         "{emptyset}", 
         "\u2205"
     ], 
     [
-        "{i-bar}", 
+        "{i bar}", 
         "\u0268"
     ], 
     [
-        "{turned-m}", 
+        "{turned m}", 
         "\u026f"
     ], 
     [
@@ -48,7 +68,7 @@
         "\u0283"
     ], 
     [
-        "{barred-o}", 
+        "{barred o}", 
         "\u00f8"
     ], 
     [
@@ -72,7 +92,7 @@
         "\u025a"
     ], 
     [
-        "{g-stroke}", 
+        "{g stroke}", 
         "\u01e5"
     ], 
     [
@@ -80,23 +100,23 @@
         "\u02c8"
     ], 
     [
-        "{->}", 
+        "{ >}", 
         "\u2192"
     ], 
     [
-        "{nw-arr}", 
+        "{nw arr}", 
         "\u2196"
     ], 
     [
-        "{ne-arr}", 
+        "{ne arr}", 
         "\u2197"
     ], 
     [
-        "{se-arr}", 
+        "{se arr}", 
         "\u2198"
     ], 
     [
-        "{sw-arr}", 
+        "{sw arr}", 
         "\u2199"
     ], 
     [
@@ -104,7 +124,7 @@
         "\u2192"
     ], 
     [
-        "{<-}", 
+        "{< }", 
         "\u2190"
     ], 
     [
@@ -112,8 +132,16 @@
         "\u2190"
     ], 
     [
-        "{open-e}", 
+        "{open o}", 
+        "\u0254"
+    ], 
+    [
+        "{open e}", 
         "\u025b"
+    ], 
+    [
+        "{raised h}", 
+        "\u02B0"
     ], 
     [
         "{raised y}", 
@@ -124,7 +152,7 @@
         "\u0142"
     ], 
     [
-        "{small-cap-a}", 
+        "{small cap a}", 
         "\u1d00"
     ], 
     [
@@ -136,7 +164,7 @@
         "\u0304"
     ], 
     [
-        "{big-l-stroke}", 
+        "{big l stroke}", 
         "\u0141"
     ], 
     [
@@ -144,111 +172,147 @@
         "\u0142"
     ], 
     [
-        "{small-cap-a}", 
+        "{small cap a}", 
         "\u1d00"
     ], 
     [
-        "{small-cap-b}", 
+        "{small cap b}", 
         "\u0299"
     ], 
     [
-        "{small-cap-c}", 
+        "{small cap c}", 
         "\u1d04"
     ], 
     [
-        "{small-cap-d}", 
+        "{small cap d}", 
         "\u1d05"
     ], 
     [
-        "{small-cap-e}", 
+        "{small cap e}", 
         "\u1d07"
     ], 
     [
-        "{small-cap-f}", 
+        "{small cap f}", 
         "\ua730"
     ], 
     [
-        "{small-cap-g}", 
+        "{small cap g}", 
         "\u0262"
     ], 
     [
-        "{small-cap-h}", 
+        "{small cap h}", 
         "\u029c"
     ], 
     [
-        "{small-cap-i}", 
+        "{small cap i}", 
         "\u026a"
     ], 
     [
-        "{small-cap-j}", 
+        "{small cap j}", 
         "\u1d0a"
     ], 
     [
-        "{small-cap-k}", 
+        "{small cap k}", 
         "\u1d0b"
     ], 
     [
-        "{small-cap-l}", 
+        "{small cap l}", 
         "\u029f"
     ], 
     [
-        "{small-cap-m}", 
+        "{small cap m}", 
         "\u1d0d"
     ], 
     [
-        "{small-cap-n}", 
+        "{small cap n}", 
         "\u0274"
     ], 
     [
-        "{small-cap-o}", 
+        "{small cap o}", 
         "\u1d0f"
     ], 
     [
-        "{small-cap-p}", 
+        "{small cap p}", 
         "\u1d18"
     ], 
     [
-        "{small-cap-q}", 
-        "-"
+        "{small cap q}", 
+        " "
     ], 
     [
-        "{small-cap-r}", 
+        "{small cap r}", 
         "\u0280"
     ], 
     [
-        "{small-cap-s}", 
+        "{small cap s}", 
         "\ua731"
     ], 
     [
-        "{small-cap-t}", 
+        "{small cap t}", 
         "\u1d1b"
     ], 
     [
-        "{small-cap-u}", 
+        "{small cap u}", 
         "\u1d1c"
     ], 
     [
-        "{small-cap-v}", 
+        "{small cap v}", 
         "\u1d20"
     ], 
     [
-        "{small-cap-w}", 
+        "{small cap w}", 
         "\u1d21"
     ], 
     [
-        "{small-cap-y}", 
+        "{small cap y}", 
         "\u028f"
     ], 
     [
-      "{commaabove}",
-      "\u0313"
-    ],
-    [
-        "{small-cap-z}", 
+        "{small cap z}", 
         "\u1d22"
     ],
     [
-        "{raised-w}", 
-        "\u02B7"
+        "{endash}", 
+        "\u2013"
+    ],
+    [
+        "{commaabove}", 
+        "\u0313"
+    ],
+    [
+        "{ok}", 
+        "\u02BB"
+    ],
+    [
+        "{okina}", 
+        "\u02BB"
+    ],
+    [
+        "{ellipsis}", 
+        "\u2026"
+    ],
+    [
+        "{question}", 
+        "\u00BF"
+    ],
+    [
+        "{invertedquestion}", 
+        "\u00BF"
+    ],
+    [
+        "{beta}", 
+        "\u03B2"
+    ],
+    [
+        "{emdash}", 
+        "\u2014"
+    ],
+    [
+        "{acute}", 
+        "\u0301"
+    ],
+    [
+        "{turnedv}", 
+        "\u028C"
     ]
 ]
