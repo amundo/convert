@@ -1,36 +1,36 @@
 [
   [
-    "{barredb}",
+    "{barredb}", 
     "b\u0335"
-  ],
+  ], 
   [
-    "{gamma}",
+    "{gamma}", 
     "\u0263"
-  ],
+  ], 
   [
-    "{voiceless}",
+    "{voiceless}", 
     "\u0325"
-  ],
+  ], 
   [
-    "{ringbelow}",
+    "{ringbelow}", 
     "\u0325"
-  ],
+  ], 
   [
-    "{circlebelow}",
+    "{circlebelow}", 
     "\u0325"
-  ],
+  ], 
   [
-    "{section}",
-    "d\u00A7"
-  ],
+    "{section}", 
+    "d\u00a7"
+  ], 
   [
-    "{barredd}",
+    "{barredd}", 
     "d\u0335"
-  ],
+  ], 
   [
-    "{cent}",
-    "\u00A2"
-  ],
+    "{cent}", 
+    "\u00a2"
+  ], 
   [
     "{lquote}", 
     "\u2018"
@@ -352,9 +352,9 @@
     "\u2014"
   ], 
   [
-    "{raisedglottal}",
-    "\u02C0"
-  ],
+    "{raisedglottal}", 
+    "\u02c0"
+  ], 
   [
     "{acute}", 
     "\u0301"
@@ -598,21 +598,25 @@
   [
     "{raisedV}", 
     "\u2c7d"
-  ],
+  ], 
   [
-    "{velarnasal}",
-    "\u014B"
-  ],
+    "{velarnasal}", 
+    "\u014b"
+  ], 
   [
-    "{eng}",
-    "\u014B"
-  ],
+    "{eng}", 
+    "\u014b"
+  ], 
   [
-    "{checkbox}",
+    "{checkbox}", 
     "\u2611"
-  ],
+  ], 
   [
-    "{engma}",
-    "\u014B"
+    "{engma}", 
+    "\u014b"
+  ], 
+  [
+    "{smile}", 
+    "\u263a"
   ]
 ]
