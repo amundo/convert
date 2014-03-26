@@ -5,8 +5,9 @@ import codecs
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
 import re, json
 
+SUBFILE='/Users/pathall/Sites/convert/subfile.json' # configure
 
-subs = json.load(open('/Users/pathall/Sites/convert/subfile.json', 'U'))
+subs = json.load(open(SUBFILE, 'U'))
 
 def convert(content):
   for pair in subs:

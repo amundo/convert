@@ -35,11 +35,16 @@ $(function(){
     return text;
   }
 
-  $('#before').keyup(function(){
+  $('#before').keyup(function(ev){
 
     var before = $('#before').attr('value');
     var after = convert(before);
     $('#after').attr('value', after);
+
+    if(ev.which == 27){
+
+      $('#before').val($('#after').attr('value'));
+    }
 
   })
 
