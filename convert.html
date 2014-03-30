@@ -21,7 +21,7 @@ $(function(){
   function storeRules(data){
     $('#rules').data('rules', data);
     $.each(data, function(i, datum){
-      $('#rules').append('<dt>'+datum[0]+'</dt><dd>'+datum[1]+'</dd>');
+      $('#rules').append('<span class=rule><kbd>'+datum[0]+'</kbd> <output>' + datum[1]+'</output></span>');
     })
   }
 
@@ -55,9 +55,34 @@ $(function(){
     <style type="text/css">
 
 #content { overflow:auto; padding: 2em; }
-#rules { font-size:small; border: 1px dotted gray; overflow: auto; margin: 1em;padding: 4px; width: 10em; float:left; }
-#rules dd { margin:0; padding: 0;}
-#rules dt {  margin:0; padding: 0;}
+#rules { font-size:small; border: 1px dotted gray; overflow: auto; margin: 1em;padding: 4px;  }
+.rule { 
+  margin:1em;
+  display:inline-block;
+  line-height:1.4;
+}
+.rule kbd, output { 
+  padding: 2px;
+  font-family: monospace;
+  min-width: 1em;
+}
+
+.rule kbd { 
+  background: #333;
+  margin:0;
+  color: white;
+  border: 1px solid #333;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.rule output { 
+  margin:0;
+  padding-left:1em;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 1px solid #333;
+}
+
 textarea { font-family: 'Aboriginal Serif'; font-size: 2em ; line-height: 150%; width: 40%; border: 1px solid black; height: 400px;}
 textarea#before {   }
 textarea#after { float:right;  }
@@ -65,20 +90,13 @@ textarea#after { float:right;  }
   </head>
   <body class='mainpage'>
 
-  <div id='header'>
-    <h1>convert letters</h1>
-  </div>
 
-<p>
-a simple way to type fancy unicode letters: "{g-stroke}" becomes  &#x01E5;", and so on.
-</p>
   <div id="content">
-<dl id=rules>
-<dt><strong>before</strong></dt>
-<dd><strong>after</strong></dd>
-</dl>
 <textarea id="before"></textarea>
 <textarea id="after"></textarea>
+<div id=rules>
+  <p><input type=search id=searchRules></p>
+</div>
   </div><!--  #content -->
 
   </body>
