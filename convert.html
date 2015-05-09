@@ -5,6 +5,7 @@
     <title>
 convert 
     </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src='js/jquery.js' type='text/javascript'></script>
     <script src='js/convert.js' type='text/javascript'></script>
 
@@ -21,7 +22,11 @@ $(function(){
   function storeRules(data){
     $('#rules').data('rules', data);
     $.each(data, function(i, datum){
-      $('#rules').append('<span class=rule><kbd>'+datum[0]+'</kbd> <output>' + datum[1]+'</output></span>');
+      var
+        code = datum[0],
+        letter = datum[1];
+      code = code.replace('{','').replace('}','');
+      $('#rules').append('<li class=rule><kbd>'+letter+'</kbd> <output>' +code+'</output></li>');
     })
   }
 
@@ -54,40 +59,30 @@ $(function(){
 
     <style type="text/css">
 
-#content { overflow:auto; padding: 2em; }
-#rules { font-size:small; border: 1px dotted gray; overflow: auto; margin: 1em;padding: 4px;  }
-.rule { 
-  margin:1em;
-  display:inline-block;
-  line-height:1.4;
-}
-.rule kbd, output { 
-  padding: 2px;
-  font-family: monospace;
-  min-width: 1em;
+#content { 
+  overflow:auto;
+  padding: 2em;
 }
 
-.rule kbd { 
-  background: #333;
-  margin:0;
-  color: white;
-  border: 1px solid #333;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.rule output { 
-  margin:0;
-  padding-left:1em;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border: 1px solid #333;
+textarea { 
+  letter-spacing: 2px;
+  font-size: 2em ;
+  line-height: 150%;
+  width: 40%;
+  border: 1px solid black;
+  height: 400px;
 }
 
-textarea { font-family: 'Aboriginal Serif'; font-size: 2em ; line-height: 150%; width: 40%; border: 1px solid black; height: 400px;}
 textarea#before {   }
-textarea#after { float:right;  }
+
+textarea#after { 
+  float:right;  
+}
+
     </style>
   </head>
+<p>Unicode input helper
+</p>
   <body class='mainpage'>
 
 

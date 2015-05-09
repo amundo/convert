@@ -2,7 +2,12 @@
 
 body { 
   margin: 0;
+  font-family: "Gentium Plus";
   padding: 0 ;
+}
+
+textarea { 
+  font-family: "Gentium Plus";
 }
 
 #bar { 
@@ -56,4 +61,19 @@ body {
 
 #bar .name{
   font-variant: small-caps;
+}
+
+#rules { 
+  clear:both;
+  -moz-column-count: 5;
+}
+
+#rules li { 
+  list-style-type: none;
+}
+
+kbd {  
+  background:#ccc;
+  border-radius: 10%;
+  padding: 2px;
 }
