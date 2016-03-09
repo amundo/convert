@@ -746,21 +746,73 @@
   [
     "{check}", 
     "\u2713"
-  ],
+  ], 
   [
-    "{trademark}",
+    "{trademark}", 
     "\u2122"
-  ],
+  ], 
   [
-    "{tm}",
+    "{tm}", 
     "\u2122"
-  ],
+  ], 
   [
-    "{registered}",
-    "\u00AE"
-  ],
+    "{registered}", 
+    "\u00ae"
+  ], 
   [
-    "{dagger}",
+    "{dagger}", 
     "\u2020"
+  ], 
+  [
+    "{halfring}", 
+    "\u02be"
+  ], 
+  [
+    "{multiply}", 
+    "\u00d7"
+  ], 
+  [
+    "{halflong}", 
+    "\u02d1"
+  ], 
+  [
+    "{schwar}", 
+    "\u025a"
+  ], 
+  [
+    "{heart}", 
+    "\u2665"
+  ], 
+  [
+    "{raisedi}", 
+    "\u2071"
+  ], 
+  [
+    "{half}", 
+    "\u00bd"
+  ], 
+  [
+    "{mult}", 
+    "\u2715"
+  ], 
+  [
+    "{shook}", 
+    "\u0282"
+  ], 
+  [
+    "{stail}", 
+    "\u0282"
+  ], 
+  [
+    "{subsetOrEqual}", 
+    "\u2286"
+  ], 
+  [
+    "{italicSigma}", 
+    "\ud835\udef4"
+  ], 
+  [
+    "{thereExists}", 
+    "\u2208"
   ]
 ]
