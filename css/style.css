@@ -77,3 +77,24 @@ kbd {
   border-radius: 10%;
   padding: 2px;
 }
+
+#content { 
+  overflow:auto;
+  padding: 2em;
+}
+
+textarea { 
+  letter-spacing: 2px;
+  font-size: 2em ;
+  line-height: 150%;
+  width: 40%;
+  border: 1px solid black;
+  height: 400px;
+}
+
+textarea#before {   }
+
+textarea#after { 
+  float:right;  
+}
+
