@@ -8,5 +8,5 @@ going to type a document or something (say, transcribe something)
 in a language that has {open-e} as part of its orthography, okay,
 I'll find & install a keyboard. If I'm just trying to make a comment
 on the linguistics reddit (which is what prompted me to do this
-app, believe it or not), I just want to a fast way to get some
+app, believe it or not), I just want a fast way to get some
 letters without too much thinking.
